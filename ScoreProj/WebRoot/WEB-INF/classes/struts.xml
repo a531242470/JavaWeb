@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+<package name="default" namespace="/" extends="struts-default">
+</package>
+<package name="users" namespace="/users" extends="default">
+	<action name="*_*" class="action.{1}Action" method="{2}">
+	<result name="login_success">/gate.jsp</result>
+	<result name="login_failure">/users/users_login_failure.jsp</result>
+	<result name="logout_success">/login.jsp</result>
+	<result name="addDepScore_success">/index.jsp</result>
+	<result name="search_score_success">/index.jsp</result>
+	<result name="searchDepScore_success">/index.jsp</result>
+	<result name="depScore_isNoNull">/index.jsp</result>
+	<result name="chooserdep_success">/index.jsp</result>
+	<result name="reflash_success">/index.jsp</result>
+	
+	<result name="toupdata_success">/updata.jsp</result>
+	</action>
+
+</package>
+</struts>    
